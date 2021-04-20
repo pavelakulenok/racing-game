@@ -18,5 +18,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func onEnterGameButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "GameViewController", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "GameViewController")
+        present(viewController, animated: true, completion: nil)
     }
 }
