@@ -11,9 +11,13 @@ class GameViewController: UIViewController {
     private var carSpeedTimer = Timer()
     private var countScoreTimer = Timer()
     private var levelTimer = Timer()
+    private var oncomingCarTimer = Timer()
+    private var passingCarTimer = Timer()
     private var score = 0
     private var level = 0
     private var speed = 0.005
+    private let oncomingCar = UIImageView()
+    private let passingCar = UIImageView()
 
     @IBOutlet weak var firstRoadLine: UIView!
     @IBOutlet weak var secondRoadLine: UIView!
@@ -25,14 +29,26 @@ class GameViewController: UIViewController {
     @IBOutlet weak var carView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var levelLable: UILabel!
+    @IBOutlet weak var leftShoulder: UIView!
+    @IBOutlet weak var rightShoulder: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        carSpeedTimer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(gameLogic), userInfo: nil, repeats: true)
+        carSpeedTimer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(carMovement), userInfo: nil, repeats: true)
+        oncomingCarTimer = Timer.scheduledTimer(timeInterval: speed / 2, target: self, selector: #selector(oncomingCarMovement), userInfo: nil, repeats: true)
+        passingCarTimer = Timer.scheduledTimer(timeInterval: speed * 2, target: self, selector: #selector(passingCarMovement), userInfo: nil, repeats: true)
         countScoreTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countScore), userInfo: nil, repeats: true)
-        levelTimer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(createGameTimer), userInfo: nil, repeats: true)
-        scoreLabel.text = "Score: \(score)"
-        levelLable.text = "Level: \(level)"
+        levelTimer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(changeLevel), userInfo: nil, repeats: true)
+
+        let oncomingCarRandomX = CGFloat.random(in: (roadView.frame.minX...roadView.frame.width / 2 - 70))
+        oncomingCar.frame = CGRect(x: oncomingCarRandomX, y: -150, width: 70, height: 150)
+        oncomingCar.image = UIImage(named: "oncomingCar")
+        roadView.addSubview(oncomingCar)
+
+        let passingCarRandomX = CGFloat.random(in: (roadView.frame.maxX - roadView.frame.width / 2...roadView.frame.maxX - 70))
+        passingCar.frame = CGRect(x: passingCarRandomX, y: -150, width: 70, height: 150)
+        passingCar.image = UIImage(named: "passingCar")
+        roadView.addSubview(passingCar)
     }
 
     @IBAction private func carMove(_ sender: UIPanGestureRecognizer) {
@@ -43,13 +59,18 @@ class GameViewController: UIViewController {
         sender.setTranslation(CGPoint.zero, in: view)
     }
 
-    @objc private func gameLogic() {
+    @objc private func carMovement() {
         roadLinesMovement(item: firstRoadLine)
         roadLinesMovement(item: secondRoadLine)
         roadLinesMovement(item: thirdRoadLine)
         roadLinesMovement(item: fourthRoadLine)
         roadLinesMovement(item: fifthRoadLine)
         roadLinesMovement(item: sixthRoadLine)
+        if carView.frame.intersects(oncomingCar.frame) || carView.frame.intersects(passingCar.frame) {
+            dismiss(animated: true, completion: nil)
+        } else if carView.frame.intersects(leftShoulder.frame) || carView.frame.intersects(rightShoulder.frame) {
+            dismiss(animated: true, completion: nil)
+        }
     }
 
     private func roadLinesMovement(item: UIView) {
@@ -60,16 +81,38 @@ class GameViewController: UIViewController {
         }
     }
 
+    @objc private func oncomingCarMovement() {
+        if oncomingCar.frame.origin.y > roadView.frame.height {
+            let randomX = CGFloat.random(in: (roadView.frame.minX...roadView.frame.width / 2 - 70))
+            oncomingCar.frame = CGRect(x: randomX, y: -150, width: 70, height: 150)
+        } else {
+            oncomingCar.frame = CGRect(x: oncomingCar.frame.origin.x, y: oncomingCar.frame.origin.y + 1, width: oncomingCar.frame.size.width, height: oncomingCar.frame.size.height)
+        }
+    }
+
+    @objc private func passingCarMovement() {
+        if passingCar.frame.origin.y > roadView.frame.height {
+            let passingCarRandomX = CGFloat.random(in: (roadView.frame.maxX - roadView.frame.width / 2...roadView.frame.maxX - 70))
+            passingCar.frame = CGRect(x: passingCarRandomX, y: -150, width: 70, height: 150)
+        } else {
+            passingCar.frame = CGRect(x: passingCar.frame.origin.x, y: passingCar.frame.origin.y + 1, width: passingCar.frame.size.width, height: passingCar.frame.size.height)
+        }
+    }
+
     @objc private func countScore() {
         score += 1
         scoreLabel.text = "Score: \(score)"
     }
 
-    @objc private func createGameTimer () -> Timer {
-        speed /= 1.05
+    @objc private func changeLevel() {
+        carSpeedTimer.invalidate()
+        oncomingCarTimer.invalidate()
+        passingCarTimer.invalidate()
         level += 1
         levelLable.text = "Level: \(level)"
-        let carSpeedTimer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(gameLogic), userInfo: nil, repeats: true)
-        return carSpeedTimer
+        speed /= 1.1
+        carSpeedTimer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(carMovement), userInfo: nil, repeats: true)
+        oncomingCarTimer = Timer.scheduledTimer(timeInterval: speed / 2, target: self, selector: #selector(oncomingCarMovement), userInfo: nil, repeats: true)
+        passingCarTimer = Timer.scheduledTimer(timeInterval: speed * 1.5, target: self, selector: #selector(passingCarMovement), userInfo: nil, repeats: true)
     }
 }

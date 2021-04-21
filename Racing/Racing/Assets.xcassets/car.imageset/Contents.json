@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "pngarea.com_car-top-view-6822986.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +11,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "pngarea.com_car-top-view-6822985.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
