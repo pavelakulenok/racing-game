@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
     private var passingCarTimer = Timer()
     private var score = 0
     private var level = 0
-    private var speed = 0.005
+    private var speed = 0.01
     private let oncomingCar = UIImageView()
     private let passingCar = UIImageView()
 
