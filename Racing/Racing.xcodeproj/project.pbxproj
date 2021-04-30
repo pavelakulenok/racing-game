@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D493781E263BFBDA00218AB8 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D493781D263BFBDA00218AB8 /* Courgette-Regular.ttf */; };
+		D4937820263BFBE700218AB8 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D493781F263BFBE700218AB8 /* PermanentMarker-Regular.ttf */; };
 		D49BE79C262D928100D2710F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE79B262D928100D2710F /* GameViewController.swift */; };
 		D49BE79F262D929B00D2710F /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49BE79E262D929B00D2710F /* GameViewController.storyboard */; };
 		D4E76C142608D4BA00605213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E76C132608D4BA00605213 /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D493781D263BFBDA00218AB8 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
+		D493781F263BFBE700218AB8 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		D49BE79B262D928100D2710F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D49BE79E262D929B00D2710F /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		D4E76C102608D4BA00605213 /* Racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Racing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D493781C263BFBA800218AB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4E76C1C2608D4BB00605213 /* Assets.xcassets */,
+				D493781D263BFBDA00218AB8 /* Courgette-Regular.ttf */,
+				D493781F263BFBE700218AB8 /* PermanentMarker-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D4E76C072608D4BA00605213 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +74,13 @@
 		D4E76C122608D4BA00605213 /* Racing */ = {
 			isa = PBXGroup;
 			children = (
+				D493781C263BFBA800218AB8 /* Resources */,
 				D4E76C132608D4BA00605213 /* AppDelegate.swift */,
 				D4E76C152608D4BA00605213 /* SceneDelegate.swift */,
 				D4E76C172608D4BA00605213 /* ViewController.swift */,
 				D49BE79B262D928100D2710F /* GameViewController.swift */,
 				D4E76C192608D4BA00605213 /* Main.storyboard */,
 				D49BE79E262D929B00D2710F /* GameViewController.storyboard */,
-				D4E76C1C2608D4BB00605213 /* Assets.xcassets */,
 				D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */,
 				D4E76C212608D4BB00605213 /* Info.plist */,
 			);
@@ -133,7 +147,9 @@
 			files = (
 				D49BE79F262D929B00D2710F /* GameViewController.storyboard in Resources */,
 				D4E76C202608D4BB00605213 /* LaunchScreen.storyboard in Resources */,
+				D493781E263BFBDA00218AB8 /* Courgette-Regular.ttf in Resources */,
 				D4E76C1D2608D4BB00605213 /* Assets.xcassets in Resources */,
+				D4937820263BFBE700218AB8 /* PermanentMarker-Regular.ttf in Resources */,
 				D4E76C1B2608D4BA00605213 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
