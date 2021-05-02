@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEG-jP-EuO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEG-jP-EuO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -140,7 +140,6 @@
                                     <constraint firstItem="0S2-G1-c3l" firstAttribute="leading" secondItem="GVx-2k-WI3" secondAttribute="leading" constant="5" id="M64-we-8Gb"/>
                                     <constraint firstAttribute="bottom" secondItem="9SK-o5-PPX" secondAttribute="bottom" id="h38-mB-QaN"/>
                                     <constraint firstAttribute="trailing" secondItem="0S2-G1-c3l" secondAttribute="trailing" constant="5" id="jsC-gG-JIC"/>
-                                    <constraint firstItem="0S2-G1-c3l" firstAttribute="top" secondItem="GVx-2k-WI3" secondAttribute="top" id="pTw-wx-MSu"/>
                                     <constraint firstItem="9SK-o5-PPX" firstAttribute="top" secondItem="GVx-2k-WI3" secondAttribute="top" id="rh8-po-W0U"/>
                                 </constraints>
                             </view>
@@ -149,9 +148,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GVx-2k-WI3" firstAttribute="bottom" secondItem="D3g-Ys-cHh" secondAttribute="bottom" constant="34" id="5yk-U9-Kxw"/>
+                            <constraint firstItem="GVx-2k-WI3" firstAttribute="top" secondItem="QPP-cy-SCh" secondAttribute="top" id="Clx-VL-O7C"/>
                             <constraint firstItem="GVx-2k-WI3" firstAttribute="leading" secondItem="D3g-Ys-cHh" secondAttribute="leading" id="cad-DF-3h3"/>
                             <constraint firstItem="GVx-2k-WI3" firstAttribute="trailing" secondItem="D3g-Ys-cHh" secondAttribute="trailing" id="pz7-v3-WW3"/>
-                            <constraint firstItem="GVx-2k-WI3" firstAttribute="top" secondItem="D3g-Ys-cHh" secondAttribute="top" constant="-44" id="qcv-z8-TcO"/>
                         </constraints>
                     </view>
                     <connections>
