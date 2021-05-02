@@ -13,6 +13,6 @@ extension UIColor {
         let green = (hex & 0x00FF00) >> 8
         let blue = 0x0000FF
 
-        self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: 1.0)
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
     }
 }
