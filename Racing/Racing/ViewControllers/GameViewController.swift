@@ -78,11 +78,9 @@ class GameViewController: UIViewController {
         roadLinesMovement(item: fifthRoadLine)
         roadLinesMovement(item: sixthRoadLine)
         if carView.frame.intersects(oncomingCar.frame) || carView.frame.intersects(passingCar.frame) {
-            let viewController = StartScreenViewController.instantiate()
-            present(viewController, animated: true, completion: nil)
+            accidentActions()
         } else if carView.frame.intersects(leftShoulder.frame) || carView.frame.intersects(rightShoulder.frame) {
-            let viewController = StartScreenViewController.instantiate()
-            present(viewController, animated: true, completion: nil)
+            accidentActions()
         }
     }
 
@@ -126,14 +124,29 @@ class GameViewController: UIViewController {
     }
 
     @objc private func changeLevel() {
-        carSpeedTimer.invalidate()
-        oncomingCarTimer.invalidate()
-        passingCarTimer.invalidate()
+        stopTimers()
         level += 1
         levelLable.text = "Level: \(level)"
         speed /= 1.1
         carSpeedTimer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(carMovement), userInfo: nil, repeats: true)
         oncomingCarTimer = Timer.scheduledTimer(timeInterval: speed / 2, target: self, selector: #selector(oncomingCarMovement), userInfo: nil, repeats: true)
         passingCarTimer = Timer.scheduledTimer(timeInterval: speed * 1.5, target: self, selector: #selector(passingCarMovement), userInfo: nil, repeats: true)
+    }
+
+    private func stopTimers() {
+        carSpeedTimer.invalidate()
+        oncomingCarTimer.invalidate()
+        passingCarTimer.invalidate()
+    }
+
+    private func accidentActions() {
+        stopTimers()
+        levelTimer.invalidate()
+        countScoreTimer.invalidate()
+        SaveResoultsManager.saveResoults(level: level, score: score)
+        showAlertWithOneButton(title: "Crash!", message: "your score: \(score)", actionTitle: "ok", actionStyle: .default) { _ in
+            let viewController = StartScreenViewController.instantiate()
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
 }
