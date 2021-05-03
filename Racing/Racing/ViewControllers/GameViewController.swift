@@ -143,7 +143,7 @@ class GameViewController: UIViewController {
         stopTimers()
         levelTimer.invalidate()
         countScoreTimer.invalidate()
-        SaveResoultsManager.saveResoults(level: level, score: score)
+        SaveResultsManager.saveResults(level: level, score: score)
         showAlertWithOneButton(title: "Crash!", message: "your score: \(score)", actionTitle: "ok", actionStyle: .default) { _ in
             let viewController = StartScreenViewController.instantiate()
             self.present(viewController, animated: true, completion: nil)
