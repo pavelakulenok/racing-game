@@ -13,29 +13,43 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Start Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Racing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="StartScreenViewController" customModule="Racing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="83R-I9-IW0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="83R-I9-IW0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-oJ-9Jx">
-                                <rect key="frame" x="39" y="728" width="336" height="84"/>
+                                <rect key="frame" x="106" y="663" width="202" height="84"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="UFp-oJ-9Jx" secondAttribute="height" multiplier="10:2.5" id="jsf-Qo-6IM"/>
+                                    <constraint firstAttribute="width" secondItem="UFp-oJ-9Jx" secondAttribute="height" multiplier="6:2.5" id="jsf-Qo-6IM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="50"/>
-                                <state key="normal" title="Enter Game">
+                                <state key="normal" title="Start">
                                     <color key="titleColor" systemColor="systemPurpleColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="onEnterGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x9f-rp-Ril"/>
+                                    <action selector="onStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x9f-rp-Ril"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACd-TP-uuY">
+                                <rect key="frame" x="115.5" y="777" width="183" height="55"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ACd-TP-uuY" secondAttribute="height" multiplier="10:3" id="yEx-qp-u9y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PermanentMarker-Regular" family="Permanent Marker" pointSize="30"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSettingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ksv-wU-3lA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,16 +59,19 @@
                             <constraint firstItem="83R-I9-IW0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0F3-Qn-qss"/>
                             <constraint firstItem="83R-I9-IW0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1fZ-E1-r8n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="83R-I9-IW0" secondAttribute="trailing" id="9rW-1P-pt9"/>
+                            <constraint firstItem="ACd-TP-uuY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ESz-tD-KTq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="83R-I9-IW0" secondAttribute="bottom" id="Sq6-k5-KWA"/>
                             <constraint firstItem="83R-I9-IW0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vgd-zD-VgQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UFp-oJ-9Jx" secondAttribute="bottom" constant="50" id="YEv-8S-aez"/>
                             <constraint firstItem="83R-I9-IW0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aGQ-7E-TAB"/>
                             <constraint firstItem="UFp-oJ-9Jx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dvp-7s-1fw"/>
                             <constraint firstItem="83R-I9-IW0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sMD-Ie-qYl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ACd-TP-uuY" secondAttribute="bottom" constant="30" id="t4l-kk-X2s"/>
+                            <constraint firstItem="ACd-TP-uuY" firstAttribute="top" secondItem="UFp-oJ-9Jx" secondAttribute="bottom" constant="30" id="t5R-dz-cVe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="enterGameButton" destination="UFp-oJ-9Jx" id="TAh-Bb-39t"/>
+                        <outlet property="settingsButton" destination="ACd-TP-uuY" id="Mec-QE-SIu"/>
+                        <outlet property="startButton" destination="UFp-oJ-9Jx" id="TAh-Bb-39t"/>
                         <outlet property="startScreenBackgroundImageView" destination="83R-I9-IW0" id="geH-Ny-kr6"/>
                     </connections>
                 </viewController>
@@ -64,11 +81,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="startScreenBackground" width="562.5" height="1218"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

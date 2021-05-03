@@ -36,6 +36,9 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let imageName = UserDefaults.standard.string(forKey: "vehicle") {
+            carView.image = UIImage(named: imageName)
+        }
         carSpeedTimer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(carMovement), userInfo: nil, repeats: true)
         oncomingCarTimer = Timer.scheduledTimer(timeInterval: speed / 2, target: self, selector: #selector(oncomingCarMovement), userInfo: nil, repeats: true)
         passingCarTimer = Timer.scheduledTimer(timeInterval: speed * 2, target: self, selector: #selector(passingCarMovement), userInfo: nil, repeats: true)
@@ -75,9 +78,11 @@ class GameViewController: UIViewController {
         roadLinesMovement(item: fifthRoadLine)
         roadLinesMovement(item: sixthRoadLine)
         if carView.frame.intersects(oncomingCar.frame) || carView.frame.intersects(passingCar.frame) {
-            dismiss(animated: true, completion: nil)
+            let viewController = StartScreenViewController.instantiate()
+            present(viewController, animated: true, completion: nil)
         } else if carView.frame.intersects(leftShoulder.frame) || carView.frame.intersects(rightShoulder.frame) {
-            dismiss(animated: true, completion: nil)
+            let viewController = StartScreenViewController.instantiate()
+            present(viewController, animated: true, completion: nil)
         }
     }
 
