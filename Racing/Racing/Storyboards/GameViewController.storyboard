@@ -73,7 +73,7 @@
                                                     <constraint firstAttribute="width" constant="5" id="zOl-Ze-08B"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="nGt-bl-bQ9">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redCar" translatesAutoresizingMaskIntoConstraints="NO" id="nGt-bl-bQ9">
                                                 <rect key="frame" x="167" y="646" width="70" height="150"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -179,7 +179,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" width="573.5" height="1200"/>
+        <image name="redCar" width="573.5" height="1200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

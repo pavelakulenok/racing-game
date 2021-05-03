@@ -18,6 +18,8 @@ class GameViewController: UIViewController {
     private var speed = 0.01
     private let oncomingCar = UIImageView()
     private let passingCar = UIImageView()
+    private let oncomingCarImageArray = [UIImage(named: "oncomingYellowCar"), UIImage(named: "oncomingRedCar"), UIImage(named: "oncomingBlueCar")]
+    private let passingCarImageArray = [UIImage(named: "passingYellowCar"), UIImage(named: "passingRedCar"), UIImage(named: "passingBlueCar")]
 
     @IBOutlet weak var firstRoadLine: UIView!
     @IBOutlet weak var secondRoadLine: UIView!
@@ -42,12 +44,18 @@ class GameViewController: UIViewController {
 
         let oncomingCarRandomX = CGFloat.random(in: (roadView.frame.minX...roadView.frame.width / 2 - 70))
         oncomingCar.frame = CGRect(x: oncomingCarRandomX, y: -150, width: 70, height: 150)
-        oncomingCar.image = UIImage(named: "oncomingCar")
+        let oncomingCarImage = oncomingCarImageArray.randomElement()
+        if let image = oncomingCarImage as? UIImage {
+            oncomingCar.image = image
+        }
         roadView.addSubview(oncomingCar)
 
         let passingCarRandomX = CGFloat.random(in: (roadView.frame.maxX - roadView.frame.width / 2...roadView.frame.maxX - 70))
         passingCar.frame = CGRect(x: passingCarRandomX, y: -150, width: 70, height: 150)
-        passingCar.image = UIImage(named: "passingCar")
+        let passingCarImage = passingCarImageArray.randomElement()
+        if let image = passingCarImage as? UIImage {
+            passingCar.image = image
+        }
         roadView.addSubview(passingCar)
     }
 
@@ -85,6 +93,10 @@ class GameViewController: UIViewController {
         if oncomingCar.frame.origin.y > roadView.frame.height {
             let randomX = CGFloat.random(in: (roadView.frame.minX...roadView.frame.width / 2 - 70))
             oncomingCar.frame = CGRect(x: randomX, y: -150, width: 70, height: 150)
+            let oncomingCarImage = oncomingCarImageArray.randomElement()
+            if let image = oncomingCarImage as? UIImage {
+                oncomingCar.image = image
+            }
         } else {
             oncomingCar.frame = CGRect(x: oncomingCar.frame.origin.x, y: oncomingCar.frame.origin.y + 1, width: oncomingCar.frame.size.width, height: oncomingCar.frame.size.height)
         }
@@ -94,6 +106,10 @@ class GameViewController: UIViewController {
         if passingCar.frame.origin.y > roadView.frame.height {
             let passingCarRandomX = CGFloat.random(in: (roadView.frame.maxX - roadView.frame.width / 2...roadView.frame.maxX - 70))
             passingCar.frame = CGRect(x: passingCarRandomX, y: -150, width: 70, height: 150)
+            let passingCarImage = passingCarImageArray.randomElement()
+            if let image = passingCarImage as? UIImage {
+                passingCar.image = image
+            }
         } else {
             passingCar.frame = CGRect(x: passingCar.frame.origin.x, y: passingCar.frame.origin.y + 1, width: passingCar.frame.size.width, height: passingCar.frame.size.height)
         }
