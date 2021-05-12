@@ -13,13 +13,11 @@ enum SaveResultsManager {
         guard let name = UserDefaults.standard.string(forKey: "nickname") else {
             return
         }
-        let text = "Nickname: \(name), Level: \(level), Score: \(score)"
+        let resultsOfGame = Results(name: name, score: score, level: level)
         if let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let resultFilePath = directory.appendingPathComponent(file)
-            do {
-                try text.write(to: resultFilePath, atomically: false, encoding: .utf8)
-            } catch {
-                print("Can't save resoults")
+            let resultFilePath = directory.appendingPathComponent("\(file).json")
+            if let data = try? JSONEncoder().encode(resultsOfGame) {
+                try? data.write(to: resultFilePath)
             }
         }
     }
