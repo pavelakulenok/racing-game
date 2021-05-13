@@ -9,7 +9,9 @@ import Foundation
 
 enum SaveResultsManager {
     static func saveResults(level: Int, score: Int) {
-        let file = "\(Date())"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
+        let file = "\(dateFormatter.string(from: Date()))"
         guard let name = UserDefaults.standard.string(forKey: "nickname") else {
             return
         }
