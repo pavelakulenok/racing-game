@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="Racing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-EA-kGL">
+                                <rect key="frame" x="105" y="74" width="204" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED7-sP-tej">
+                                <rect key="frame" x="142" y="204" width="130.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DD6-9y-sbx">
+                                <rect key="frame" x="20" y="240" width="374" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select you vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGO-WH-P7P">
+                                <rect key="frame" x="91" y="355.5" width="232.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkw-WO-DM8">
+                                <rect key="frame" x="62" y="416.5" width="70" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="3Vx-dr-MrM"/>
+                                    <constraint firstAttribute="width" constant="70" id="heL-yA-Rsr"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="redCar"/>
+                                <connections>
+                                    <action selector="onCarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NaK-ty-x5g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-Vf-RO9">
+                                <rect key="frame" x="172" y="416.5" width="70" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="JzW-Pp-58A"/>
+                                    <constraint firstAttribute="width" constant="70" id="Uho-Ka-VwM"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="motorcycle"/>
+                                <connections>
+                                    <action selector="onMotorcycleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LCv-5i-kDX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fuu-Z2-Mlq">
+                                <rect key="frame" x="282" y="416.5" width="70" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="cRb-ed-RxQ"/>
+                                    <constraint firstAttribute="height" constant="130" id="sRc-mK-Wyt"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="bolide"/>
+                                <connections>
+                                    <action selector="onBolideButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uao-ZX-Cbn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heI-bk-u1X">
+                                <rect key="frame" x="117" y="646.5" width="180" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="41J-Ps-qB9"/>
+                                    <constraint firstAttribute="height" constant="50" id="D1i-mS-kz1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Start Race!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStartRaceButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Tpe-9D-rxN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="kGO-WH-P7P" firstAttribute="top" secondItem="DD6-9y-sbx" secondAttribute="bottom" constant="70" id="0bt-Lz-b4a"/>
+                            <constraint firstItem="Fuu-Z2-Mlq" firstAttribute="top" secondItem="kGO-WH-P7P" secondAttribute="bottom" constant="25" id="2mz-ND-8Q8"/>
+                            <constraint firstItem="DD6-9y-sbx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Acd-Ea-rOG"/>
+                            <constraint firstItem="heI-bk-u1X" firstAttribute="top" secondItem="Dkw-WO-DM8" secondAttribute="bottom" constant="100" id="F6s-rm-8Rv"/>
+                            <constraint firstItem="kGO-WH-P7P" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="K7V-qT-tRO"/>
+                            <constraint firstItem="d1l-Vf-RO9" firstAttribute="top" secondItem="kGO-WH-P7P" secondAttribute="bottom" constant="25" id="KdD-Xg-NrS"/>
+                            <constraint firstItem="DD6-9y-sbx" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LJC-HN-66F"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DD6-9y-sbx" secondAttribute="trailing" constant="20" id="M9j-mc-2Cc"/>
+                            <constraint firstItem="KfO-EA-kGL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RZA-Q0-1VC"/>
+                            <constraint firstItem="KfO-EA-kGL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="Xat-Eq-gQR"/>
+                            <constraint firstItem="heI-bk-u1X" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aw2-kh-8bb"/>
+                            <constraint firstItem="DD6-9y-sbx" firstAttribute="top" secondItem="ED7-sP-tej" secondAttribute="bottom" id="bei-uK-90K"/>
+                            <constraint firstItem="d1l-Vf-RO9" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="biU-dt-Ucb"/>
+                            <constraint firstItem="ED7-sP-tej" firstAttribute="top" secondItem="KfO-EA-kGL" secondAttribute="bottom" constant="70" id="cfJ-bz-eLV"/>
+                            <constraint firstItem="ED7-sP-tej" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eLv-gY-Qqv"/>
+                            <constraint firstItem="Fuu-Z2-Mlq" firstAttribute="leading" secondItem="d1l-Vf-RO9" secondAttribute="trailing" constant="40" id="tuR-ML-J5h"/>
+                            <constraint firstItem="Dkw-WO-DM8" firstAttribute="top" secondItem="kGO-WH-P7P" secondAttribute="bottom" constant="25" id="xfV-5y-5fg"/>
+                            <constraint firstItem="d1l-Vf-RO9" firstAttribute="leading" secondItem="Dkw-WO-DM8" secondAttribute="trailing" constant="40" id="xpf-cc-Nch"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bolideButton" destination="Fuu-Z2-Mlq" id="Iqd-wZ-rkl"/>
+                        <outlet property="carButton" destination="Dkw-WO-DM8" id="iL9-C4-rhz"/>
+                        <outlet property="motorcycleButton" destination="d1l-Vf-RO9" id="Lsi-yx-bYd"/>
+                        <outlet property="nicknameTextField" destination="DD6-9y-sbx" id="h4l-bo-I2Z"/>
+                        <outlet property="startRaceButton" destination="heI-bk-u1X" id="Xrk-CN-h35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="-339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bolide" width="202.5" height="505"/>
+        <image name="motorcycle" width="379" height="844.5"/>
+        <image name="redCar" width="573.5" height="1200"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pngarea.com_car-top-view-6822954.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pngarea.com_car-top-view-6822955.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pngarea.com_car-top-view-6822956.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
