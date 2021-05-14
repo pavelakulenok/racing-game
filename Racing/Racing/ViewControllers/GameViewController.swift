@@ -10,7 +10,7 @@ import UIKit
 class GameViewController: UIViewController {
     private var carSpeedTimer = Timer()
     private var countScoreTimer = Timer()
-    private var levelTimer = Timer()
+    private var countLevelTimer = Timer()
     private var oncomingCarTimer = Timer()
     private var passingCarTimer = Timer()
     private var score = 0
@@ -43,7 +43,7 @@ class GameViewController: UIViewController {
         oncomingCarTimer = Timer.scheduledTimer(timeInterval: speed / 2, target: self, selector: #selector(oncomingCarMovement), userInfo: nil, repeats: true)
         passingCarTimer = Timer.scheduledTimer(timeInterval: speed * 2, target: self, selector: #selector(passingCarMovement), userInfo: nil, repeats: true)
         countScoreTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countScore), userInfo: nil, repeats: true)
-        levelTimer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(changeLevel), userInfo: nil, repeats: true)
+        countLevelTimer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(changeLevel), userInfo: nil, repeats: true)
 
         let oncomingCarRandomX = CGFloat.random(in: (roadView.frame.minX...roadView.frame.width / 2 - 70))
         oncomingCar.frame = CGRect(x: oncomingCarRandomX, y: -150, width: 70, height: 150)
@@ -124,7 +124,7 @@ class GameViewController: UIViewController {
     }
 
     @objc private func changeLevel() {
-        stopTimers()
+        stopMovementTimers()
         level += 1
         levelLable.text = "Level: \(level)"
         speed /= 1.1
@@ -133,16 +133,20 @@ class GameViewController: UIViewController {
         passingCarTimer = Timer.scheduledTimer(timeInterval: speed * 1.5, target: self, selector: #selector(passingCarMovement), userInfo: nil, repeats: true)
     }
 
-    private func stopTimers() {
+    private func stopMovementTimers() {
         carSpeedTimer.invalidate()
         oncomingCarTimer.invalidate()
         passingCarTimer.invalidate()
     }
 
-    private func accidentActions() {
-        stopTimers()
-        levelTimer.invalidate()
+    private func stopCountTimers() {
+        countLevelTimer.invalidate()
         countScoreTimer.invalidate()
+    }
+
+    private func accidentActions() {
+        stopMovementTimers()
+        stopCountTimers()
         SaveResultsManager.saveResults(level: level, score: score)
         showAlertWithOneButton(title: "Crash!", message: "your score: \(score)", actionTitle: "ok", actionStyle: .default) { _ in
             let viewController = StartScreenViewController.instantiate()

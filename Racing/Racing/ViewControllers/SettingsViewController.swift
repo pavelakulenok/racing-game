@@ -22,27 +22,36 @@ class SettingsViewController: UIViewController {
         if let name = UserDefaults.standard.string(forKey: "nickname") {
             nicknameTextField.text = name
         }
+        if let selectedVehicle = UserDefaults.standard.string(forKey: "vehicle") {
+            if selectedVehicle == "redCar" {
+                addShadow(button: carButton)
+            } else if selectedVehicle == "motorcycle" {
+                addShadow(button: motorcycleButton)
+            } else if selectedVehicle == "bolide" {
+                addShadow(button: bolideButton)
+            }
+        }
     }
 
     @IBAction private func onCarButton(_ sender: Any) {
         vehicle = "redCar"
-        carButton.addShadow(color: .green, opacity: 1.0, offSet: .zero, radius: 30)
-        motorcycleButton.layer.shadowOpacity = 0
-        bolideButton.layer.shadowOpacity = 0
+        addShadow(button: carButton)
+        removeShadow(button: motorcycleButton)
+        removeShadow(button: bolideButton)
     }
 
     @IBAction private func onMotorcycleButton(_ sender: Any) {
         vehicle = "motorcycle"
-        motorcycleButton.addShadow(color: .green, opacity: 1.0, offSet: .zero, radius: 30)
-        carButton.layer.shadowOpacity = 0
-        bolideButton.layer.shadowOpacity = 0
+        addShadow(button: motorcycleButton)
+        removeShadow(button: carButton)
+        removeShadow(button: bolideButton)
     }
 
     @IBAction private func onBolideButton(_ sender: Any) {
         vehicle = "bolide"
-        bolideButton.addShadow(color: .green, opacity: 1.0, offSet: .zero, radius: 30)
-        carButton.layer.shadowOpacity = 0
-        motorcycleButton.layer.shadowOpacity = 0
+        addShadow(button: bolideButton)
+        removeShadow(button: carButton)
+        removeShadow(button: motorcycleButton)
     }
 
     @IBAction private func onStartRaceButton(_ sender: Any) {
@@ -61,5 +70,13 @@ class SettingsViewController: UIViewController {
             let viewController = GameViewController.instantiate()
             present(viewController, animated: true, completion: nil)
         }
+    }
+
+    private func addShadow(button: UIButton) {
+        button.addShadow(color: .green, opacity: 1.0, offSet: .zero, radius: 30)
+    }
+
+    private func removeShadow(button: UIButton) {
+        button.layer.shadowOpacity = 0
     }
 }
