@@ -19,7 +19,7 @@ class ResultsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ResultTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "cell")
-        arrayOfResults = ReadResultsManager.readFromResults()
+        arrayOfResults = ReadResultsManager.readFromResults().sorted { $0.score > $1.score }
     }
 
     @IBAction private func onMenuButton(_ sender: Any) {
