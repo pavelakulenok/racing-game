@@ -8,21 +8,23 @@
 import Foundation
 
 enum ReadResultsManager {
-    static func readFromResults() {
+    static func readFromResults() -> [Results] {
+        var array = [Results]()
         guard let resultsFolderPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            return
+            return []
         }
         guard let resultsFilesNameArray = try? FileManager.default.contentsOfDirectory(at: resultsFolderPath, includingPropertiesForKeys: nil, options: []) else {
-            return
+            return []
         }
         for item in resultsFilesNameArray {
             guard let data = try? Data(contentsOf: item) else {
-                return
+                return []
             }
             guard let results = try? JSONDecoder().decode(Results.self, from: data) else {
-                return
+                return []
             }
-            print(results)
+            array.append(results)
         }
+        return array
     }
 }

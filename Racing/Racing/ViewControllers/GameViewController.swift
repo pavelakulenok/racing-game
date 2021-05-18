@@ -148,8 +148,11 @@ class GameViewController: UIViewController {
         stopMovementTimers()
         stopCountTimers()
         SaveResultsManager.saveResults(level: level, score: score)
-        showAlertWithOneButton(title: "Crash!", message: "your score: \(score)", actionTitle: "ok", actionStyle: .default) { _ in
+        showAlertWithTwoButtons(title: "Crash!", message: "your score: \(score)", firstActionTitle: "Menu", firstActionStyle: .default, firstHandler: { _ in
             let viewController = StartScreenViewController.instantiate()
+            self.present(viewController, animated: true, completion: nil)
+        }, secondActionTitle: "Scores", secondActionStyle: .default) { _ in
+            let viewController = ResultsViewController.instantiate()
             self.present(viewController, animated: true, completion: nil)
         }
     }
