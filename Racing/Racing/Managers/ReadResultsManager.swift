@@ -17,13 +17,13 @@ enum ReadResultsManager {
             return []
         }
         for item in resultsFilesNameArray {
-            guard let data = try? Data(contentsOf: item) else {
-                return []
+            do {
+                let data = try Data(contentsOf: item)
+                let results = try JSONDecoder().decode(Results.self, from: data)
+                array.append(results)
+            } catch {
+                print("can't decode data from \(resultsFolderPath)")
             }
-            guard let results = try? JSONDecoder().decode(Results.self, from: data) else {
-                return []
-            }
-            array.append(results)
         }
         return array
     }

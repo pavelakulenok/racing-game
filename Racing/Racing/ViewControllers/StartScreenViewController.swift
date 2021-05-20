@@ -11,12 +11,14 @@ class StartScreenViewController: UIViewController {
     @IBOutlet weak var startScreenBackgroundImageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var scoresButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         startScreenBackgroundImageView.image = UIImage(named: "startScreenBackground")
         startButton.applyCornerRadius(20)
         settingsButton.applyCornerRadius(10)
+        scoresButton.applyCornerRadius(10)
     }
 
     @IBAction private func onStart(_ sender: UIButton) {
@@ -33,5 +35,10 @@ class StartScreenViewController: UIViewController {
     @IBAction private func onSettingsButton(_ sender: Any) {
         let viewController = SettingsViewController.instantiate()
         present(viewController, animated: true, completion: nil)
+    }
+
+    @IBAction private func onScoresButton(_ sender: Any) {
+        let viewContoller = ResultsViewController.instantiate()
+        present(viewContoller, animated: true, completion: nil)
     }
 }
