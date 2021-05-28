@@ -20,6 +20,7 @@ class GameViewController: UIViewController {
     private let passingCar = UIImageView()
     private let oncomingCarImageArray = [UIImage(named: "oncomingYellowCar"), UIImage(named: "oncomingRedCar"), UIImage(named: "oncomingBlueCar")]
     private let passingCarImageArray = [UIImage(named: "passingYellowCar"), UIImage(named: "passingRedCar"), UIImage(named: "passingBlueCar")]
+    private lazy var dateFormatter = DateFormatter()
 
     @IBOutlet weak var firstRoadLine: UIView!
     @IBOutlet weak var secondRoadLine: UIView!
@@ -147,8 +148,10 @@ class GameViewController: UIViewController {
     private func accidentActions() {
         stopMovementTimers()
         stopCountTimers()
-        SaveResultsManager.saveResults(level: level, score: score)
-        showAlertWithTwoButtons(title: "Crash!", message: "your score: \(score)", firstActionTitle: "Menu", firstActionStyle: .default, firstHandler: { _ in
+        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
+        let resultFileName = "\(dateFormatter.string(from: Date()))"
+        SaveResultsManager.saveResults(level: level, score: score, resultFileName: resultFileName)
+        showAlertWithOneButton(title: "Crash!", message: "your score: \(score)", actionTitle: "ok", actionStyle: .default) { _ in
             let viewController = StartScreenViewController.instantiate()
             self.present(viewController, animated: true, completion: nil)
         }, secondActionTitle: "Scores", secondActionStyle: .default) { _ in
