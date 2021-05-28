@@ -154,6 +154,9 @@ class GameViewController: UIViewController {
         showAlertWithOneButton(title: "Crash!", message: "your score: \(score)", actionTitle: "ok", actionStyle: .default) { _ in
             let viewController = StartScreenViewController.instantiate()
             self.present(viewController, animated: true, completion: nil)
+        }, secondActionTitle: "Scores", secondActionStyle: .default) { _ in
+            let viewController = ResultsViewController.instantiate()
+            self.present(viewController, animated: true, completion: nil)
         }
     }
 }

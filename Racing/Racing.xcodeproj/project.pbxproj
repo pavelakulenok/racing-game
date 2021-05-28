@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42C146D26527D4E00FD4EEA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */; };
+		D42C146F26527D6C00FD4EEA /* ResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42C146E26527D6C00FD4EEA /* ResultsViewController.storyboard */; };
 		D44BE8BE2640029F00183B67 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44BE8BD2640029F00183B67 /* SettingsViewController.storyboard */; };
 		D44BE8C0264002F600183B67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44BE8BF264002F600183B67 /* SettingsViewController.swift */; };
 		D44BE8C22640295B00183B67 /* SaveResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44BE8C12640295B00183B67 /* SaveResultsManager.swift */; };
+		D46260F02653C5D600D409E5 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */; };
+		D46260F12653C5D600D409E5 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */; };
 		D49274EE263F2DCD002CFD50 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D49274ED263F2DCD002CFD50 /* PermanentMarker-Regular.ttf */; };
 		D49274F0263F2E64002CFD50 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D49274EF263F2E63002CFD50 /* Courgette-Regular.ttf */; };
 		D49BE79C262D928100D2710F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE79B262D928100D2710F /* GameViewController.swift */; };
@@ -29,9 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		D42C146E26527D6C00FD4EEA /* ResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsViewController.storyboard; sourceTree = "<group>"; };
 		D44BE8BD2640029F00183B67 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		D44BE8BF264002F600183B67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D44BE8C12640295B00183B67 /* SaveResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveResultsManager.swift; sourceTree = "<group>"; };
+		D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		D49274ED263F2DCD002CFD50 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		D49274EF263F2E63002CFD50 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
 		D49BE79B262D928100D2710F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D46B5DCE2656A9B900E8C358 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D44BE8C12640295B00183B67 /* SaveResultsManager.swift */,
+				D4DE5CA5264C1FB800C4AB37 /* ReadResultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D46B5DD02656A9EC00E8C358 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4DE5CA3264C1F7200C4AB37 /* Results.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D46B5DD12656AA0000E8C358 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */,
+				D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D49274EC263F2D68002CFD50 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				D49BE79B262D928100D2710F /* GameViewController.swift */,
+				D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */,
 				D44BE8BF264002F600183B67 /* SettingsViewController.swift */,
 				D4E76C172608D4BA00605213 /* StartScreenViewController.swift */,
 			);
@@ -86,7 +121,9 @@
 		D4A58B7C263ADE280080F0A0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */,
 				D49BE79E262D929B00D2710F /* GameViewController.storyboard */,
+				D42C146E26527D6C00FD4EEA /* ResultsViewController.storyboard */,
 				D44BE8BD2640029F00183B67 /* SettingsViewController.storyboard */,
 				D4E76C192608D4BA00605213 /* StartScreenViewController.storyboard */,
 			);
@@ -123,16 +160,15 @@
 		D4E76C122608D4BA00605213 /* Racing */ = {
 			isa = PBXGroup;
 			children = (
+				D46B5DD12656AA0000E8C358 /* Views */,
+				D46B5DD02656A9EC00E8C358 /* Models */,
+				D46B5DCE2656A9B900E8C358 /* Managers */,
 				D49274EC263F2D68002CFD50 /* Resources */,
 				D4A58B7D263ADE5B0080F0A0 /* Extensions */,
 				D4A58B7C263ADE280080F0A0 /* Storyboards */,
 				D4A58B7B263ADDED0080F0A0 /* ViewControllers */,
 				D4E76C132608D4BA00605213 /* AppDelegate.swift */,
-				D44BE8C12640295B00183B67 /* SaveResultsManager.swift */,
-				D4DE5CA3264C1F7200C4AB37 /* Results.swift */,
-				D4DE5CA5264C1FB800C4AB37 /* ReadResultsManager.swift */,
 				D4E76C152608D4BA00605213 /* SceneDelegate.swift */,
-				D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */,
 				D4E76C212608D4BB00605213 /* Info.plist */,
 			);
 			path = Racing;
@@ -196,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42C146F26527D6C00FD4EEA /* ResultsViewController.storyboard in Resources */,
 				D44BE8BE2640029F00183B67 /* SettingsViewController.storyboard in Resources */,
 				D49274F0263F2E64002CFD50 /* Courgette-Regular.ttf in Resources */,
 				D49BE79F262D929B00D2710F /* GameViewController.storyboard in Resources */,
@@ -203,6 +240,7 @@
 				D4E76C1D2608D4BB00605213 /* Assets.xcassets in Resources */,
 				D49274EE263F2DCD002CFD50 /* PermanentMarker-Regular.ttf in Resources */,
 				D4E76C1B2608D4BA00605213 /* StartScreenViewController.storyboard in Resources */,
+				D46260F12653C5D600D409E5 /* ResultTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +273,7 @@
 			files = (
 				D4DE5CA6264C1FB800C4AB37 /* ReadResultsManager.swift in Sources */,
 				D49BE79C262D928100D2710F /* GameViewController.swift in Sources */,
+				D46260F02653C5D600D409E5 /* ResultTableViewCell.swift in Sources */,
 				D44BE8C22640295B00183B67 /* SaveResultsManager.swift in Sources */,
 				D4E76C182608D4BA00605213 /* StartScreenViewController.swift in Sources */,
 				D4A58B7F263AE23F0080F0A0 /* UIView+UIUtilities.swift in Sources */,
@@ -243,6 +282,7 @@
 				D4A58B83263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift in Sources */,
 				D4DE5CA4264C1F7200C4AB37 /* Results.swift in Sources */,
 				D4E76C142608D4BA00605213 /* AppDelegate.swift in Sources */,
+				D42C146D26527D4E00FD4EEA /* ResultsViewController.swift in Sources */,
 				D4E76C162608D4BA00605213 /* SceneDelegate.swift in Sources */,
 				D44BE8C0264002F600183B67 /* SettingsViewController.swift in Sources */,
 			);
