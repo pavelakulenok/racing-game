@@ -8,16 +8,13 @@
 import Foundation
 
 enum SaveResultsManager {
-    static func saveResults(level: Int, score: Int) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
-        let file = "\(dateFormatter.string(from: Date()))"
+    static func saveResults(level: Int, score: Int, resultFileName: String) {
         guard let name = UserDefaults.standard.string(forKey: "nickname") else {
             return
         }
         let resultsOfGame = Results(name: name, score: score, level: level)
         if let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let resultFilePath = directory.appendingPathComponent("\(file).json")
+            let resultFilePath = directory.appendingPathComponent("\(resultFileName).json")
             do {
                 let data = try JSONEncoder().encode(resultsOfGame)
                 try data.write(to: resultFilePath)
