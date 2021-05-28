@@ -22,7 +22,7 @@ enum ReadResultsManager {
                 let results = try JSONDecoder().decode(Results.self, from: data)
                 array.append(results)
             } catch {
-                print("can't decode data from \(resultsFolderPath)")
+                assertionFailure("can't decode data from \(resultsFolderPath)")
             }
         }
         return array
