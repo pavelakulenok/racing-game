@@ -121,13 +121,13 @@ class GameViewController: UIViewController {
 
     @objc private func countScore() {
         score += 1
-        scoreLabel.text = "Score: \(score)"
+        scoreLabel.text = "GameScore".localize() +  "\(score)"
     }
 
     @objc private func changeLevel() {
         stopMovementTimers()
         level += 1
-        levelLable.text = "Level: \(level)"
+        levelLable.text = "GameLevel".localize() + "\(level)"
         speed /= 1.1
         carSpeedTimer = Timer.scheduledTimer(timeInterval: speed, target: self, selector: #selector(carMovement), userInfo: nil, repeats: true)
         oncomingCarTimer = Timer.scheduledTimer(timeInterval: speed / 2, target: self, selector: #selector(oncomingCarMovement), userInfo: nil, repeats: true)
@@ -151,10 +151,10 @@ class GameViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
         let resultFileName = "\(dateFormatter.string(from: Date()))"
         SaveResultsManager.saveResults(level: level, score: score, resultFileName: resultFileName)
-        showAlertWithTwoButtons(title: "Crash!", message: "your score: \(score)", firstActionTitle: "ok", firstActionStyle: .default, firstHandler: { _ in
+        showAlertWithTwoButtons(title: "GameAlertTitle".localize(), message: "GameAlertMessage".localize() + "\(score)", firstActionTitle: "GameAlertFirstActionTitle".localize(), firstActionStyle: .default, firstHandler: { _ in
             let viewController = StartScreenViewController.instantiate()
             self.present(viewController, animated: true, completion: nil)
-        }, secondActionTitle: "Scores", secondActionStyle: .default) { _ in
+        }, secondActionTitle: "GameAlertSecondActionTitle".localize(), secondActionStyle: .default) { _ in
             let viewController = ResultsViewController.instantiate()
             self.present(viewController, animated: true, completion: nil)
         }

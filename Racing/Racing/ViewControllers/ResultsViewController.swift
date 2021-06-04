@@ -35,11 +35,11 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = Bundle.main.loadNibNamed("ResultTableViewCell", owner: self, options: nil)?.first as? ResultTableViewCell
-        headerView?.userNameLabel.text = "Name"
+        headerView?.userNameLabel.text = "ResultsCellName".localize()
         headerView?.userNameLabel.applyPermanentMarkerFont(25)
-        headerView?.scoreLabel.text = "Score"
+        headerView?.scoreLabel.text = "ResultsCellScore".localize()
         headerView?.scoreLabel.applyPermanentMarkerFont(25)
-        headerView?.levelLabel.text = "Level"
+        headerView?.levelLabel.text = "ResultsCellLevel".localize()
         headerView?.levelLabel.applyPermanentMarkerFont(25)
         headerView?.layer.borderWidth = 3.0
         return headerView

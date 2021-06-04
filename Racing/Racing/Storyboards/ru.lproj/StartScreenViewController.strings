@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "ACd-TP-uuY"; */
+"ACd-TP-uuY.normalTitle" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "UFp-oJ-9Jx"; */
+"UFp-oJ-9Jx.normalTitle" = "Начать";
+
+/* Class = "UIButton"; normalTitle = "Scores"; ObjectID = "j0t-yn-TAl"; */
+"j0t-yn-TAl.normalTitle" = "Результаты";

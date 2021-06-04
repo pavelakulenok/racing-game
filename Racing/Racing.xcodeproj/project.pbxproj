@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4127C1E266A574500A8DA27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4127C20266A574500A8DA27 /* Localizable.strings */; };
+		D4127C23266A5C5300A8DA27 /* String+NSLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127C22266A5C5300A8DA27 /* String+NSLocalizedString.swift */; };
 		D42C146D26527D4E00FD4EEA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */; };
-		D42C146F26527D6C00FD4EEA /* ResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42C146E26527D6C00FD4EEA /* ResultsViewController.storyboard */; };
-		D44BE8BE2640029F00183B67 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44BE8BD2640029F00183B67 /* SettingsViewController.storyboard */; };
 		D44BE8C0264002F600183B67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44BE8BF264002F600183B67 /* SettingsViewController.swift */; };
 		D44BE8C22640295B00183B67 /* SaveResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44BE8C12640295B00183B67 /* SaveResultsManager.swift */; };
 		D46260F02653C5D600D409E5 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */; };
 		D46260F12653C5D600D409E5 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */; };
+		D479724B2669119C00E30D4F /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D479724D2669119C00E30D4F /* GameViewController.storyboard */; };
+		D4797250266911EE00E30D4F /* ResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4797252266911EE00E30D4F /* ResultsViewController.storyboard */; };
+		D4797255266911FF00E30D4F /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4797257266911FF00E30D4F /* SettingsViewController.storyboard */; };
 		D49274EE263F2DCD002CFD50 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D49274ED263F2DCD002CFD50 /* PermanentMarker-Regular.ttf */; };
 		D49274F0263F2E64002CFD50 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D49274EF263F2E63002CFD50 /* Courgette-Regular.ttf */; };
 		D49BE79C262D928100D2710F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE79B262D928100D2710F /* GameViewController.swift */; };
-		D49BE79F262D929B00D2710F /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49BE79E262D929B00D2710F /* GameViewController.storyboard */; };
 		D4A58B7F263AE23F0080F0A0 /* UIView+UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A58B7E263AE23F0080F0A0 /* UIView+UIUtilities.swift */; };
 		D4A58B81263AE4860080F0A0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A58B80263AE4860080F0A0 /* UIColor+Hex.swift */; };
 		D4A58B83263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A58B82263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift */; };
@@ -33,17 +35,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4127C1F266A574500A8DA27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4127C21266A574A00A8DA27 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4127C22266A5C5300A8DA27 /* String+NSLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSLocalizedString.swift"; sourceTree = "<group>"; };
 		D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		D42C146E26527D6C00FD4EEA /* ResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsViewController.storyboard; sourceTree = "<group>"; };
-		D44BE8BD2640029F00183B67 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		D44BE8BF264002F600183B67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D44BE8C12640295B00183B67 /* SaveResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveResultsManager.swift; sourceTree = "<group>"; };
 		D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		D47972492669118800E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D479724A2669118800E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/StartScreenViewController.strings; sourceTree = "<group>"; };
+		D479724C2669119C00E30D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GameViewController.storyboard; sourceTree = "<group>"; };
+		D479724F266911A000E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/GameViewController.strings; sourceTree = "<group>"; };
+		D4797251266911EE00E30D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ResultsViewController.storyboard; sourceTree = "<group>"; };
+		D4797254266911F400E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/ResultsViewController.strings; sourceTree = "<group>"; };
+		D4797256266911FF00E30D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingsViewController.storyboard; sourceTree = "<group>"; };
+		D47972592669120300E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/SettingsViewController.strings; sourceTree = "<group>"; };
 		D49274ED263F2DCD002CFD50 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		D49274EF263F2E63002CFD50 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
 		D49BE79B262D928100D2710F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		D49BE79E262D929B00D2710F /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		D4A58B7E263AE23F0080F0A0 /* UIView+UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIUtilities.swift"; sourceTree = "<group>"; };
 		D4A58B80263AE4860080F0A0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		D4A58B82263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInit.swift"; sourceTree = "<group>"; };
@@ -122,9 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */,
-				D49BE79E262D929B00D2710F /* GameViewController.storyboard */,
-				D42C146E26527D6C00FD4EEA /* ResultsViewController.storyboard */,
-				D44BE8BD2640029F00183B67 /* SettingsViewController.storyboard */,
+				D479724D2669119C00E30D4F /* GameViewController.storyboard */,
+				D4797252266911EE00E30D4F /* ResultsViewController.storyboard */,
+				D4797257266911FF00E30D4F /* SettingsViewController.storyboard */,
 				D4E76C192608D4BA00605213 /* StartScreenViewController.storyboard */,
 			);
 			path = Storyboards;
@@ -137,6 +147,7 @@
 				D4A58B80263AE4860080F0A0 /* UIColor+Hex.swift */,
 				D4A58B84263AEC920080F0A0 /* UIViewController+UIAlertVC.swift */,
 				D4A58B82263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift */,
+				D4127C22266A5C5300A8DA27 /* String+NSLocalizedString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 				D4A58B7C263ADE280080F0A0 /* Storyboards */,
 				D4A58B7B263ADDED0080F0A0 /* ViewControllers */,
 				D4E76C132608D4BA00605213 /* AppDelegate.swift */,
+				D4127C20266A574500A8DA27 /* Localizable.strings */,
 				D4E76C152608D4BA00605213 /* SceneDelegate.swift */,
 				D4E76C212608D4BB00605213 /* Info.plist */,
 			);
@@ -216,6 +228,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = D4E76C072608D4BA00605213;
 			productRefGroup = D4E76C112608D4BA00605213 /* Products */;
@@ -232,11 +245,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D42C146F26527D6C00FD4EEA /* ResultsViewController.storyboard in Resources */,
-				D44BE8BE2640029F00183B67 /* SettingsViewController.storyboard in Resources */,
+				D4797250266911EE00E30D4F /* ResultsViewController.storyboard in Resources */,
+				D4797255266911FF00E30D4F /* SettingsViewController.storyboard in Resources */,
 				D49274F0263F2E64002CFD50 /* Courgette-Regular.ttf in Resources */,
-				D49BE79F262D929B00D2710F /* GameViewController.storyboard in Resources */,
+				D479724B2669119C00E30D4F /* GameViewController.storyboard in Resources */,
 				D4E76C202608D4BB00605213 /* LaunchScreen.storyboard in Resources */,
+				D4127C1E266A574500A8DA27 /* Localizable.strings in Resources */,
 				D4E76C1D2608D4BB00605213 /* Assets.xcassets in Resources */,
 				D49274EE263F2DCD002CFD50 /* PermanentMarker-Regular.ttf in Resources */,
 				D4E76C1B2608D4BA00605213 /* StartScreenViewController.storyboard in Resources */,
@@ -274,6 +288,7 @@
 				D4DE5CA6264C1FB800C4AB37 /* ReadResultsManager.swift in Sources */,
 				D49BE79C262D928100D2710F /* GameViewController.swift in Sources */,
 				D46260F02653C5D600D409E5 /* ResultTableViewCell.swift in Sources */,
+				D4127C23266A5C5300A8DA27 /* String+NSLocalizedString.swift in Sources */,
 				D44BE8C22640295B00183B67 /* SaveResultsManager.swift in Sources */,
 				D4E76C182608D4BA00605213 /* StartScreenViewController.swift in Sources */,
 				D4A58B7F263AE23F0080F0A0 /* UIView+UIUtilities.swift in Sources */,
@@ -291,10 +306,47 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D4127C20266A574500A8DA27 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4127C1F266A574500A8DA27 /* en */,
+				D4127C21266A574A00A8DA27 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D479724D2669119C00E30D4F /* GameViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D479724C2669119C00E30D4F /* Base */,
+				D479724F266911A000E30D4F /* ru */,
+			);
+			name = GameViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		D4797252266911EE00E30D4F /* ResultsViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4797251266911EE00E30D4F /* Base */,
+				D4797254266911F400E30D4F /* ru */,
+			);
+			name = ResultsViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		D4797257266911FF00E30D4F /* SettingsViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4797256266911FF00E30D4F /* Base */,
+				D47972592669120300E30D4F /* ru */,
+			);
+			name = SettingsViewController.storyboard;
+			sourceTree = "<group>";
+		};
 		D4E76C192608D4BA00605213 /* StartScreenViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D4E76C1A2608D4BA00605213 /* Base */,
+				D479724A2669118800E30D4F /* ru */,
 			);
 			name = StartScreenViewController.storyboard;
 			sourceTree = "<group>";
@@ -303,6 +355,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D4E76C1F2608D4BB00605213 /* Base */,
+				D47972492669118800E30D4F /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -314,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -375,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
