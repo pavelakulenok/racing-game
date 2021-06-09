@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Racing
+
+  Created by Pavel Akulenak on 3.06.21.
+  
+*/
+
+// Settings screen
+// Settings screen alert
+"SettingsAlertTitle" = "Невозможно начать гонку";
+"SettingsAlertMessage" = "Выберите ваш транспорт и введите имя";
+"SettingsAlertActionTitle" = "Понятно";
+
+// Game screen
+// Game screen lables
+"GameScore" = "Очки: ";
+"GameLevel" = "Уровень: ";
+// Game screen alert
+"GameAlertTitle" = "Авария!";
+"GameAlertMessage" = "ваш результат: ";
+"GameAlertFirstActionTitle" = "Меню";
+"GameAlertSecondActionTitle" = "Результаты";
+
+// Results screen
+// Results screen tableView cell lables
+"ResultsCellName" = "Имя";
+"ResultsCellScore" = "Очки";
+"ResultsCellLevel" = "Уровень";

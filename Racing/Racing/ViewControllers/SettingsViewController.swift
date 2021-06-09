@@ -63,7 +63,7 @@ class SettingsViewController: UIViewController {
             return
         }
         if vehicle == nil || string.isEmpty {
-            showAlertWithOneButton(title: "Can't start race", message: "Chouse your vehicle and enter nickmane", actionTitle: "ok", actionStyle: .default, handler: nil)
+            showAlertWithOneButton(title: "SettingsAlertTitle".localize(), message: "SettingsAlertMessage".localize(), actionTitle: "SettingsAlertActionTitle".localize(), actionStyle: .default, handler: nil)
         } else {
             UserDefaults.standard.setValue(nicknameTextField.text, forKey: "nickname")
             UserDefaults.standard.setValue(vehicle, forKey: "vehicle")
