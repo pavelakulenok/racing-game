@@ -1,0 +1,3 @@
+# Racing game app
+
+Racing game built on the basis of UIiKit. In this game, the user must control the car with gestures so as not to collide with an obstacle or leave the road. On the settings screen, the user enters the username and selects the vehicle model, these settings are saved by UserDefault. The screen of the race is a road with obstacles in the form of oncoming and passing cars, when colliding with which the game ends and the result of the race is stored in the application directory using the FileManager. Movements are implemented by changing frames by timers. The results screen shows the results of all races using a TableView.
