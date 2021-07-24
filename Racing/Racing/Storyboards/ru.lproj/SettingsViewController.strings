@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Dkw-WO-DM8"; */
+"Dkw-WO-DM8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Nickname"; ObjectID = "ED7-sP-tej"; */
+"ED7-sP-tej.text" = "Имя пользователя";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Fuu-Z2-Mlq"; */
+"Fuu-Z2-Mlq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "KfO-EA-kGL"; */
+"KfO-EA-kGL.text" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d1l-Vf-RO9"; */
+"d1l-Vf-RO9.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Start Race!"; ObjectID = "heI-bk-u1X"; */
+"heI-bk-u1X.normalTitle" = "Начать гонку!";
+
+/* Class = "UILabel"; text = "Select you vehicle"; ObjectID = "kGO-WH-P7P"; */
+"kGO-WH-P7P.text" = "Выберите ваш транспорт";

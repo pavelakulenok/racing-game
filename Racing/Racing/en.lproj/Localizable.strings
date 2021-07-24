@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Racing
+
+  Created by Pavel Akulenak on 3.06.21.
+  
+*/
+
+// Settings screen
+// Settings screen alert
+"SettingsAlertTitle" = "Can't start race";
+"SettingsAlertMessage" = "Chouse your vehicle and enter nickmane";
+"SettingsAlertActionTitle" = "Ok";
+
+// Game screen
+// Game screen lables
+"GameScore" = "Score: ";
+"GameLevel" = "Level: ";
+// Game screen alert
+"GameAlertTitle" = "Crash!";
+"GameAlertMessage" = "your score: ";
+"GameAlertFirstActionTitle" = "Menu";
+"GameAlertSecondActionTitle" = "Scores";
+
+// Results screen
+// Results screen tableView cell lables
+"ResultsCellName" = "Name";
+"ResultsCellScore" = "Score";
+"ResultsCellLevel" = "Level";

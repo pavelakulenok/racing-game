@@ -3,27 +3,77 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E875572328A59D80DD5BD5 /* Pods_Racing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84112915566F4585F000CE1D /* Pods_Racing.framework */; };
+		D4127C1E266A574500A8DA27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4127C20266A574500A8DA27 /* Localizable.strings */; };
+		D4127C23266A5C5300A8DA27 /* String+NSLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4127C22266A5C5300A8DA27 /* String+NSLocalizedString.swift */; };
+		D42C146D26527D4E00FD4EEA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */; };
+		D44BE8C0264002F600183B67 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44BE8BF264002F600183B67 /* SettingsViewController.swift */; };
+		D44BE8C22640295B00183B67 /* SaveResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44BE8C12640295B00183B67 /* SaveResultsManager.swift */; };
+		D46260F02653C5D600D409E5 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */; };
+		D46260F12653C5D600D409E5 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */; };
+		D479724B2669119C00E30D4F /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D479724D2669119C00E30D4F /* GameViewController.storyboard */; };
+		D4797250266911EE00E30D4F /* ResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4797252266911EE00E30D4F /* ResultsViewController.storyboard */; };
+		D4797255266911FF00E30D4F /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4797257266911FF00E30D4F /* SettingsViewController.storyboard */; };
+		D49274EE263F2DCD002CFD50 /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D49274ED263F2DCD002CFD50 /* PermanentMarker-Regular.ttf */; };
+		D49274F0263F2E64002CFD50 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D49274EF263F2E63002CFD50 /* Courgette-Regular.ttf */; };
+		D49BE79C262D928100D2710F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49BE79B262D928100D2710F /* GameViewController.swift */; };
+		D4A58B7F263AE23F0080F0A0 /* UIView+UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A58B7E263AE23F0080F0A0 /* UIView+UIUtilities.swift */; };
+		D4A58B81263AE4860080F0A0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A58B80263AE4860080F0A0 /* UIColor+Hex.swift */; };
+		D4A58B83263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A58B82263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift */; };
+		D4A58B85263AEC920080F0A0 /* UIViewController+UIAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A58B84263AEC920080F0A0 /* UIViewController+UIAlertVC.swift */; };
+		D4BB08D1266BC3C800461298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4BB08D0266BC3C800461298 /* GoogleService-Info.plist */; };
+		D4DE5CA4264C1F7200C4AB37 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE5CA3264C1F7200C4AB37 /* Results.swift */; };
+		D4DE5CA6264C1FB800C4AB37 /* ReadResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE5CA5264C1FB800C4AB37 /* ReadResultsManager.swift */; };
 		D4E76C142608D4BA00605213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E76C132608D4BA00605213 /* AppDelegate.swift */; };
 		D4E76C162608D4BA00605213 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E76C152608D4BA00605213 /* SceneDelegate.swift */; };
-		D4E76C182608D4BA00605213 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E76C172608D4BA00605213 /* ViewController.swift */; };
-		D4E76C1B2608D4BA00605213 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E76C192608D4BA00605213 /* Main.storyboard */; };
+		D4E76C182608D4BA00605213 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E76C172608D4BA00605213 /* StartScreenViewController.swift */; };
+		D4E76C1B2608D4BA00605213 /* StartScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E76C192608D4BA00605213 /* StartScreenViewController.storyboard */; };
 		D4E76C1D2608D4BB00605213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E76C1C2608D4BB00605213 /* Assets.xcassets */; };
 		D4E76C202608D4BB00605213 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84112915566F4585F000CE1D /* Pods_Racing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Racing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AC24095932D3E282EDBC64 /* Pods-Racing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racing.release.xcconfig"; path = "Target Support Files/Pods-Racing/Pods-Racing.release.xcconfig"; sourceTree = "<group>"; };
+		D4127C1F266A574500A8DA27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4127C21266A574A00A8DA27 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4127C22266A5C5300A8DA27 /* String+NSLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NSLocalizedString.swift"; sourceTree = "<group>"; };
+		D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		D44BE8BF264002F600183B67 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D44BE8C12640295B00183B67 /* SaveResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveResultsManager.swift; sourceTree = "<group>"; };
+		D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		D47972492669118800E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D479724A2669118800E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/StartScreenViewController.strings; sourceTree = "<group>"; };
+		D479724C2669119C00E30D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GameViewController.storyboard; sourceTree = "<group>"; };
+		D479724F266911A000E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/GameViewController.strings; sourceTree = "<group>"; };
+		D4797251266911EE00E30D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ResultsViewController.storyboard; sourceTree = "<group>"; };
+		D4797254266911F400E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/ResultsViewController.strings; sourceTree = "<group>"; };
+		D4797256266911FF00E30D4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingsViewController.storyboard; sourceTree = "<group>"; };
+		D47972592669120300E30D4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/SettingsViewController.strings; sourceTree = "<group>"; };
+		D49274ED263F2DCD002CFD50 /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
+		D49274EF263F2E63002CFD50 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
+		D49BE79B262D928100D2710F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D4A58B7E263AE23F0080F0A0 /* UIView+UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIUtilities.swift"; sourceTree = "<group>"; };
+		D4A58B80263AE4860080F0A0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		D4A58B82263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInit.swift"; sourceTree = "<group>"; };
+		D4A58B84263AEC920080F0A0 /* UIViewController+UIAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertVC.swift"; sourceTree = "<group>"; };
+		D4BB08D0266BC3C800461298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D4DE5CA3264C1F7200C4AB37 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		D4DE5CA5264C1FB800C4AB37 /* ReadResultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadResultsManager.swift; sourceTree = "<group>"; };
 		D4E76C102608D4BA00605213 /* Racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Racing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E76C132608D4BA00605213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E76C152608D4BA00605213 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4E76C172608D4BA00605213 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4E76C1A2608D4BA00605213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4E76C172608D4BA00605213 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		D4E76C1A2608D4BA00605213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StartScreenViewController.storyboard; sourceTree = "<group>"; };
 		D4E76C1C2608D4BB00605213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E76C1F2608D4BB00605213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4E76C212608D4BB00605213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7F27260ED02F84AD53AAF71 /* Pods-Racing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racing.debug.xcconfig"; path = "Target Support Files/Pods-Racing/Pods-Racing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +81,108 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E875572328A59D80DD5BD5 /* Pods_Racing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D79DACB7417063608B23201 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7F27260ED02F84AD53AAF71 /* Pods-Racing.debug.xcconfig */,
+				D3AC24095932D3E282EDBC64 /* Pods-Racing.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		393451273C32DCA64CE40408 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84112915566F4585F000CE1D /* Pods_Racing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D46B5DCE2656A9B900E8C358 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D44BE8C12640295B00183B67 /* SaveResultsManager.swift */,
+				D4DE5CA5264C1FB800C4AB37 /* ReadResultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D46B5DD02656A9EC00E8C358 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4DE5CA3264C1F7200C4AB37 /* Results.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D46B5DD12656AA0000E8C358 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D46260EE2653C5D600D409E5 /* ResultTableViewCell.swift */,
+				D46260EF2653C5D600D409E5 /* ResultTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D49274EC263F2D68002CFD50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D49274ED263F2DCD002CFD50 /* PermanentMarker-Regular.ttf */,
+				D49274EF263F2E63002CFD50 /* Courgette-Regular.ttf */,
+				D4E76C1C2608D4BB00605213 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4A58B7B263ADDED0080F0A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D49BE79B262D928100D2710F /* GameViewController.swift */,
+				D42C146C26527D4E00FD4EEA /* ResultsViewController.swift */,
+				D44BE8BF264002F600183B67 /* SettingsViewController.swift */,
+				D4E76C172608D4BA00605213 /* StartScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D4A58B7C263ADE280080F0A0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */,
+				D479724D2669119C00E30D4F /* GameViewController.storyboard */,
+				D4797252266911EE00E30D4F /* ResultsViewController.storyboard */,
+				D4797257266911FF00E30D4F /* SettingsViewController.storyboard */,
+				D4E76C192608D4BA00605213 /* StartScreenViewController.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D4A58B7D263ADE5B0080F0A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4A58B7E263AE23F0080F0A0 /* UIView+UIUtilities.swift */,
+				D4A58B80263AE4860080F0A0 /* UIColor+Hex.swift */,
+				D4A58B84263AEC920080F0A0 /* UIViewController+UIAlertVC.swift */,
+				D4A58B82263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift */,
+				D4127C22266A5C5300A8DA27 /* String+NSLocalizedString.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D4E76C072608D4BA00605213 = {
 			isa = PBXGroup;
 			children = (
 				D4E76C122608D4BA00605213 /* Racing */,
 				D4E76C112608D4BA00605213 /* Products */,
+				0D79DACB7417063608B23201 /* Pods */,
+				393451273C32DCA64CE40408 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +197,18 @@
 		D4E76C122608D4BA00605213 /* Racing */ = {
 			isa = PBXGroup;
 			children = (
+				D46B5DD12656AA0000E8C358 /* Views */,
+				D46B5DD02656A9EC00E8C358 /* Models */,
+				D46B5DCE2656A9B900E8C358 /* Managers */,
+				D49274EC263F2D68002CFD50 /* Resources */,
+				D4A58B7D263ADE5B0080F0A0 /* Extensions */,
+				D4A58B7C263ADE280080F0A0 /* Storyboards */,
+				D4A58B7B263ADDED0080F0A0 /* ViewControllers */,
 				D4E76C132608D4BA00605213 /* AppDelegate.swift */,
+				D4127C20266A574500A8DA27 /* Localizable.strings */,
 				D4E76C152608D4BA00605213 /* SceneDelegate.swift */,
-				D4E76C172608D4BA00605213 /* ViewController.swift */,
-				D4E76C192608D4BA00605213 /* Main.storyboard */,
-				D4E76C1C2608D4BB00605213 /* Assets.xcassets */,
-				D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */,
 				D4E76C212608D4BB00605213 /* Info.plist */,
+				D4BB08D0266BC3C800461298 /* GoogleService-Info.plist */,
 			);
 			path = Racing;
 			sourceTree = "<group>";
@@ -74,10 +220,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4E76C242608D4BB00605213 /* Build configuration list for PBXNativeTarget "Racing" */;
 			buildPhases = (
+				C649C2C7604F5F2E2C130D95 /* [CP] Check Pods Manifest.lock */,
 				D4E76C0C2608D4BA00605213 /* Sources */,
 				D4E76C0D2608D4BA00605213 /* Frameworks */,
 				D4E76C0E2608D4BA00605213 /* Resources */,
 				D49BE799262D8FF300D2710F /* ShellScript */,
+				3B38C45151D8167C30C924CC /* [CP] Embed Pods Frameworks */,
+				D4BB08D2266BC4D400461298 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -109,6 +258,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = D4E76C072608D4BA00605213;
 			productRefGroup = D4E76C112608D4BA00605213 /* Products */;
@@ -125,15 +275,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4797250266911EE00E30D4F /* ResultsViewController.storyboard in Resources */,
+				D4797255266911FF00E30D4F /* SettingsViewController.storyboard in Resources */,
+				D49274F0263F2E64002CFD50 /* Courgette-Regular.ttf in Resources */,
+				D479724B2669119C00E30D4F /* GameViewController.storyboard in Resources */,
 				D4E76C202608D4BB00605213 /* LaunchScreen.storyboard in Resources */,
+				D4127C1E266A574500A8DA27 /* Localizable.strings in Resources */,
 				D4E76C1D2608D4BB00605213 /* Assets.xcassets in Resources */,
-				D4E76C1B2608D4BA00605213 /* Main.storyboard in Resources */,
+				D49274EE263F2DCD002CFD50 /* PermanentMarker-Regular.ttf in Resources */,
+				D4BB08D1266BC3C800461298 /* GoogleService-Info.plist in Resources */,
+				D4E76C1B2608D4BA00605213 /* StartScreenViewController.storyboard in Resources */,
+				D46260F12653C5D600D409E5 /* ResultTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3B38C45151D8167C30C924CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Racing/Pods-Racing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Racing/Pods-Racing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Racing/Pods-Racing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C649C2C7604F5F2E2C130D95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Racing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D49BE799262D8FF300D2710F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,6 +348,25 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		D4BB08D2266BC4D400461298 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -158,27 +374,77 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E76C182608D4BA00605213 /* ViewController.swift in Sources */,
+				D4DE5CA6264C1FB800C4AB37 /* ReadResultsManager.swift in Sources */,
+				D49BE79C262D928100D2710F /* GameViewController.swift in Sources */,
+				D46260F02653C5D600D409E5 /* ResultTableViewCell.swift in Sources */,
+				D4127C23266A5C5300A8DA27 /* String+NSLocalizedString.swift in Sources */,
+				D44BE8C22640295B00183B67 /* SaveResultsManager.swift in Sources */,
+				D4E76C182608D4BA00605213 /* StartScreenViewController.swift in Sources */,
+				D4A58B7F263AE23F0080F0A0 /* UIView+UIUtilities.swift in Sources */,
+				D4A58B81263AE4860080F0A0 /* UIColor+Hex.swift in Sources */,
+				D4A58B85263AEC920080F0A0 /* UIViewController+UIAlertVC.swift in Sources */,
+				D4A58B83263AE8B00080F0A0 /* UIViewController+StoryboardInit.swift in Sources */,
+				D4DE5CA4264C1F7200C4AB37 /* Results.swift in Sources */,
 				D4E76C142608D4BA00605213 /* AppDelegate.swift in Sources */,
+				D42C146D26527D4E00FD4EEA /* ResultsViewController.swift in Sources */,
 				D4E76C162608D4BA00605213 /* SceneDelegate.swift in Sources */,
+				D44BE8C0264002F600183B67 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D4E76C192608D4BA00605213 /* Main.storyboard */ = {
+		D4127C20266A574500A8DA27 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4127C1F266A574500A8DA27 /* en */,
+				D4127C21266A574A00A8DA27 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D479724D2669119C00E30D4F /* GameViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D479724C2669119C00E30D4F /* Base */,
+				D479724F266911A000E30D4F /* ru */,
+			);
+			name = GameViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		D4797252266911EE00E30D4F /* ResultsViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4797251266911EE00E30D4F /* Base */,
+				D4797254266911F400E30D4F /* ru */,
+			);
+			name = ResultsViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		D4797257266911FF00E30D4F /* SettingsViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4797256266911FF00E30D4F /* Base */,
+				D47972592669120300E30D4F /* ru */,
+			);
+			name = SettingsViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		D4E76C192608D4BA00605213 /* StartScreenViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D4E76C1A2608D4BA00605213 /* Base */,
+				D479724A2669118800E30D4F /* ru */,
 			);
-			name = Main.storyboard;
+			name = StartScreenViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		D4E76C1E2608D4BB00605213 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D4E76C1F2608D4BB00605213 /* Base */,
+				D47972492669118800E30D4F /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -190,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -220,7 +487,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -251,6 +518,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -304,6 +572,7 @@
 		};
 		D4E76C252608D4BB00605213 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7F27260ED02F84AD53AAF71 /* Pods-Racing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +592,7 @@
 		};
 		D4E76C262608D4BB00605213 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3AC24095932D3E282EDBC64 /* Pods-Racing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

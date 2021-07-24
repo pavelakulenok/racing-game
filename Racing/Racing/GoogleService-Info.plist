@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>780235710676-od3rnk4ervntdvq5kkv52fq8goisedpo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.780235710676-od3rnk4ervntdvq5kkv52fq8goisedpo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDXvMIUms_uRY6kk2kr77AjSkdWLRoib5A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>780235710676</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>by.paulshark.Racing</string>
+	<key>PROJECT_ID</key>
+	<string>racing-4c9bd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>racing-4c9bd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:780235710676:ios:94d1bece74c6b706e51b41</string>
+</dict>
+</plist>
